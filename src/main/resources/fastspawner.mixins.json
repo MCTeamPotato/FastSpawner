@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "package": "me.kall.fastspawner.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "overwrites": {
+    "conformVisibility": false
+  },
+  "minVersion": "0.8",
+  "client": [
+    "BaseSpawnerMixin",
+    "SpawnerRendererMixin",
+    "embeddium.SodiumGameOptionPagesMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "fastspawner.particle.name": "Spawner Particle",
+  "fastspawner.particle.tooltip": "Modify this to control the rendering percentage of the spawners' Fire & Smoke particle. Generally this is not very important unless there are many spawners around you."
+}
