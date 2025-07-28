@@ -31,7 +31,7 @@ public abstract class SodiumGameOptionPagesMixin {
         OptionImpl<SodiumGameOptions, Integer> particle = OptionImpl.createBuilder(Integer.TYPE, sodiumOpts)
                 .setName(Component.translatable("fastspawner.particle.name"))
                 .setTooltip(Component.translatable("fastspawner.particle.tooltip"))
-                .setControl(option -> new SliderControl(option, 1, 100, 5, ControlValueFormatter.number()))
+                .setControl(option -> new SliderControl(option, 1, 100, 3, ControlValueFormatter.number()))
                 .setBinding((sodiumGameOptions, integer) -> FastSpawner.PARTICLE_RENDERING_PERCENT.set(integer), sodiumGameOptions -> FastSpawner.PARTICLE_RENDERING_PERCENT.get())
                 .setImpact(OptionImpact.VARIES)
                 .build();
