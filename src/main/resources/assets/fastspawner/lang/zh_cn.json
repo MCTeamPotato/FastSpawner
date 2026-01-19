@@ -1,4 +1,6 @@
 {
   "fastspawner.particle.name": "刷怪笼粒子",
-  "fastspawner.particle.tooltip": "这个选项能够控制刷怪笼火焰&烟雾粒子的渲染比例。总的来说，除非你身边的刷怪笼很多，这在性能上并不重要。"
+  "fastspawner.particle.tooltip": "这个选项能够控制刷怪笼火焰&烟雾粒子的渲染比例。总的来说，除非你身边的刷怪笼很多，这在性能上并不非常重要。",
+  "fastspawner.shift.name": "Shift显示刷怪笼内部实体",
+  "fastspawner.shift.tooltip": "若启用，刷怪笼内的实体会在玩家按下Shift时被正常渲染。若关闭，它们将永远都不再被渲染。"
 }

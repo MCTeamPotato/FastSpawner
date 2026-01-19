@@ -1,4 +1,6 @@
 {
   "fastspawner.particle.name": "Spawner Particle",
-  "fastspawner.particle.tooltip": "Modify this to control the rendering percentage of the spawners' Fire & Smoke particle. Generally this is not very important unless there are many spawners around you."
+  "fastspawner.particle.tooltip": "Modify this to control the rendering percentage of the spawners' Fire & Smoke particle. Generally this is not very important unless there are many spawners around you.",
+  "fastspawner.shift.name": "Shift To Show Spawner Internal Entity",
+  "fastspawner.shift.tooltip": "If true, entities inside spawners will be rendered when player holds Shift. If false, they will never be rendered anymore."
 }

@@ -22,6 +22,7 @@ public abstract class SpawnerRendererMixin {
             )
     )
     private @Nullable Entity onGet(BaseSpawner instance, Level level, RandomSource randomSource, BlockPos blockPos) {
+        if (!FastSpawner.SHIFT_TO_SHOW.get()) return null;
         return FastSpawner.shift() ? instance.getOrCreateDisplayEntity(level, randomSource, blockPos) : null;
     }
 }

@@ -8,6 +8,7 @@ import me.jellysquid.mods.sodium.client.gui.options.OptionImpl;
 import me.jellysquid.mods.sodium.client.gui.options.OptionPage;
 import me.jellysquid.mods.sodium.client.gui.options.control.ControlValueFormatter;
 import me.jellysquid.mods.sodium.client.gui.options.control.SliderControl;
+import me.jellysquid.mods.sodium.client.gui.options.control.TickBoxControl;
 import me.jellysquid.mods.sodium.client.gui.options.storage.SodiumOptionsStorage;
 import me.kall.fastspawner.FastSpawner;
 import net.minecraft.network.chat.Component;
@@ -35,6 +36,12 @@ public abstract class SodiumGameOptionPagesMixin {
                 .setBinding((sodiumGameOptions, integer) -> FastSpawner.PARTICLE_RENDERING_PERCENT.set(integer), sodiumGameOptions -> FastSpawner.PARTICLE_RENDERING_PERCENT.get())
                 .setImpact(OptionImpact.VARIES)
                 .build();
-        groups.add(OptionGroup.createBuilder().add(particle).build());
+        OptionImpl<SodiumGameOptions, Boolean> shift = OptionImpl.createBuilder(Boolean.TYPE, sodiumOpts)
+                .setName(Component.translatable("fastspawner.shift.name"))
+                .setTooltip(Component.translatable("fastspawner.shift.tooltip"))
+                .setControl(TickBoxControl::new)
+                .setBinding((sodiumGameOptions, value) -> FastSpawner.SHIFT_TO_SHOW.set(value), sodiumGameOptions -> FastSpawner.SHIFT_TO_SHOW.get())
+                .setImpact(OptionImpact.VARIES).build();
+        groups.add(OptionGroup.createBuilder().add(particle).add(shift).build());
     }
 }
